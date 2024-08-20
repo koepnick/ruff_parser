@@ -1,0 +1,14 @@
+[package]
+name = "ruff_parser"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+regex = "1.10.6"
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
